@@ -35,7 +35,7 @@
 
         <div class="crystalContainer"></div>
         <div id="score">
-            Total Score: <span id="total-score"></span>
+            <span id="total-score"></span>
         </div>
     </div>
 
@@ -66,7 +66,7 @@
             $("#2").attr('crystalVal', getRandomInt(1, 12));
             $("#3").attr('crystalVal', getRandomInt(1, 12));
 
-            $("#total-score").text("0");
+            $("#total-score").html("Total Score<p>0</p>");
 
         }
 
@@ -75,7 +75,9 @@
             goalNumber = getRandomInt(19, 120);
             $("#random-number").html("Number<p>" + goalNumber + "</p>");
         }
-
+        function setTotalScore() {
+            $("#total-score").html("Total Score<p>0</p>");
+        }
         // Returns a random integer between min (inclusive) and max (inclusive)
         function getRandomInt(min, max) {
             return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -109,7 +111,8 @@
             userScore = parseInt(userScore) + parseInt(clickedCrystalValue);
             if (DEBUG) console.log("Crystal Value: " + clickedCrystalValue + " user score: " + userScore);
             if (DEBUG) console.log("Goal Number: " + goalNumber);
-            $('#total-score').text(userScore.toString());
+
+            $("#total-score").html("Total Score<p>" + userScore.toString() + "</p>");
 
             //create conditions to check to see if user wins or loses using if statements
             //winner
@@ -121,7 +124,7 @@
                 //loser
             } else if (userScore > goalNumber) {
                 losses++;
-                $('#game-message').text("You Lost!");
+                $('#game-message').text("Try Again!");
                 newCrystalGame();
             }
 
@@ -130,6 +133,8 @@
         //reset and restart game
         makeDivs();
         setGoalNum();
+        setTotalScore();
+
 
 
     </script>

@@ -8,16 +8,18 @@ body {
     background: url("../images/asanoha-400px.png");
 }
 
+h1 {
+    color: #007DC1;
+}
+
 .game-about, 
 .game-info {
     width: 75%;
     margin: 0 auto;
-    background-color: #DBE5F1;
+    background-color: #FFECBD;
     border-radius: 15px;
     padding: 25px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-.game-info {
     margin-top: 25px;
 }
 .crystalContainer {
@@ -45,7 +47,8 @@ body {
     height: 100px;
     width: 150px;
     font-family: 'Georgia', Times, Times New Roman, serif;
-    font-size: 22px;
+    font-size: 24px;
+    text-align: center;
     background-color: #007DC1;
     color: #fff;
     float: left;
@@ -54,21 +57,17 @@ body {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-#random-number {
-    font-size: 24px;
-    text-align: center;
-}
-
 #tracker {
     height: 135px;
-    width: 200px;
+    width: 225px;
     font-family: 'Georgia', Times, Times New Roman, serif;
-    font-size: 16px;
+    font-size: 24px;
+    line-height: 34px;
     background-color: lightblue;
     color: #fff;
     float: left;
     padding-top: 15px;
-    padding-left: 15px;
+    padding-left: 25px;
     border-radius: 15px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
