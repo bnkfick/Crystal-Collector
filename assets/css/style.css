@@ -3,17 +3,36 @@
 body {
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
     font-size: 18px;
-    line-height: 34px;
+    line-height: 22px;
     color: #777777;
     background: url("../images/asanoha-400px.png");
 }
 
+.game-about, 
+.game-info {
+    width: 75%;
+    margin: 0 auto;
+    background-color: #DBE5F1;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.game-info {
+    margin-top: 25px;
+}
+.crystalContainer {
+    background-color:#3E3E3E;
+    float: left;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 .crystal {
     position: relative;
     float: left;
     height: 100px;
     width: 100px;
-    border: solid 1px black;
+
 }
 
 .crystal-img {
@@ -27,27 +46,31 @@ body {
     width: 150px;
     font-family: 'Georgia', Times, Times New Roman, serif;
     font-size: 22px;
-    background-color: #4aaaa5;
+    background-color: #007DC1;
     color: #fff;
     float: left;
     padding: 25px 25px 25px 25px;
-
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #random-number {
-    font-size: 32px;
+    font-size: 24px;
     text-align: center;
 }
 
 #tracker {
-    height: 140px;
+    height: 135px;
     width: 200px;
     font-family: 'Georgia', Times, Times New Roman, serif;
     font-size: 16px;
     background-color: lightblue;
     color: #fff;
     float: left;
-    padding: 5px;
+    padding-top: 15px;
+    padding-left: 15px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
 }
 

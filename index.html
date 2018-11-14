@@ -7,30 +7,36 @@
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <!-- Added link to the jQuery Library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    
+
 </head>
 
 <body>
-    <h1>Crystal Collector</h1>
-    <p>You will be given a random number at the start of the game.</p>
-    <p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total
-        score.</p>
-    <p>You win the game by matching your total score to the random number. You lose the game if your total score goes
-        above the random number.</p>
-    <p> The value of each crystal is hidden from you until you click on it.</p>
-    <p>Each time when the game starts, the game will change the values of each crystal.</p>
+    <div class="game-about">
+        <h1>Crystal Collector</h1>
+        <p>You will be given a random number at the start of the game.</p>
+        <p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your
+            total
+            score.</p>
+        <p>You win the game by matching your total score to the random number. You lose the game if your total score
+            goes
+            above the random number.</p>
+        <p> The value of each crystal is hidden from you until you click on it.</p>
+        <p>Each time when the game starts, the game will change the values of each crystal.</p>
+    </div>
 
-    <div class="clearfix">
+    <div class="game-info clearfix">
         <div id="random-number"></div>
+
         <div id="tracker">
             <div id="game-message"></div>
             Wins: <span id="wins"></span></br>
             Losses: <span id="losses"></span>
         </div>
-    </div>
-    <div class="divContainer clearfix"></div>
-    <div id="score">
-        Total Score: <span id="total-score"></span>
+
+        <div class="crystalContainer"></div>
+        <div id="score">
+            Total Score: <span id="total-score"></span>
+        </div>
     </div>
 
     <script>
@@ -55,10 +61,10 @@
             $('#wins').text(wins.toString());
             $('#losses').text(losses.toString());
 
-             $("#0").attr('crystalVal', getRandomInt(1, 12));
-             $("#1").attr('crystalVal', getRandomInt(1, 12));
-             $("#2").attr('crystalVal', getRandomInt(1, 12));
-             $("#3").attr('crystalVal', getRandomInt(1, 12));
+            $("#0").attr('crystalVal', getRandomInt(1, 12));
+            $("#1").attr('crystalVal', getRandomInt(1, 12));
+            $("#2").attr('crystalVal', getRandomInt(1, 12));
+            $("#3").attr('crystalVal', getRandomInt(1, 12));
 
             $("#total-score").text("0");
 
@@ -67,7 +73,7 @@
         //functions
         function setGoalNum() {
             goalNumber = getRandomInt(19, 120);
-            $("#random-number").text(goalNumber);
+            $("#random-number").html("Number<p>" + goalNumber + "</p>");
         }
 
         // Returns a random integer between min (inclusive) and max (inclusive)
@@ -85,7 +91,7 @@
                 div.addClass('crystal');                       // add class
                 div.attr('crystalVal', getRandomInt(1, 12));   // assign each crystal with a random value and add as attribute
                 div.attr('id', i);
-                $('.divContainer').append(div);                // append image to screen
+                $('.crystalContainer').append(div);                // append image to screen
 
                 var img = $('<img class="crystal-img">');      //Equivalent: $(document.createElement('img'))
                 img.attr('src', imgArray[i]);                  // add src
@@ -96,7 +102,7 @@
 
 
         //create click event on crystals
-        $(document).on("click", ".crystal", function () {
+        $(".crystalContainer").on("click", ".crystal", function () {
             //use $(this) to capture value attribute
             var clickedCrystalValue = $(this).attr("crystalVal");
             //add this number crom clicked value to our userScore
