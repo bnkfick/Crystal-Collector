@@ -10,6 +10,7 @@ body {
 
 h1 {
     color: #007DC1;
+    text-shadow: 2px 2px 4px #ccc;
 }
 
 .game-about, 
