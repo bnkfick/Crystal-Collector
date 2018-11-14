@@ -5,7 +5,8 @@ body {
     font-size: 18px;
     line-height: 22px;
     color: #777777;
-    background: url("../images/asanoha-400px.png");
+    /* background: url("../images/asanoha-400px.png"); */
+    background-color:#3E3E3E;
 }
 
 h1 {
@@ -15,14 +16,15 @@ h1 {
 
 .game-about, 
 .game-info {
-    width: 75%;
     margin: 0 auto;
     background-color: #FFECBD;
+    background-color: ivory;
     border-radius: 15px;
     padding: 25px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     margin-top: 25px;
 }
+
 .crystalContainer {
     background-color:#3E3E3E;
     float: left;
@@ -48,14 +50,20 @@ h1 {
     height: 100px;
     width: 150px;
     font-family: 'Georgia', Times, Times New Roman, serif;
+    font-family: monospace;
     font-size: 24px;
     text-align: center;
     background-color: #007DC1;
+    background-color:#3E3E3E;
     color: #fff;
+    color: 	#40BDF0;
     float: left;
     padding: 25px 25px 25px 25px;
     border-radius: 15px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    /* box-shadow: 4px 8px 40px 20px #0ff; */
+    /* in order: x offset, y offset, blur size, spread size, color */
+    /* blur size and spread size are optional (they default to 0) */
 }
 
 #tracker {
