@@ -1,34 +1,45 @@
 
 
 body {
-    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    background-image: url("../../assets/images/sugar-crystals.jpg"); 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+    font-family: 'Montserrat', sans-serif;
     font-size: 18px;
     line-height: 22px;
     color: #777777;
-    /* background: url("../images/asanoha-400px.png"); */
-    background-color:#3E3E3E;
+    background-color:#F7F6F2;
 }
 
-h1 {
-    color: #007DC1;
-    text-shadow: 2px 2px 4px #ccc;
+h1 { 
+    text-shadow: 1px 1px 1px black;
+    color:  #0F224E;
 }
 
 .game-about, 
 .game-info {
     margin: 0 auto;
-    background-color: #FFECBD;
-    background-color: ivory;
-    border-radius: 15px;
-    padding: 25px;
+
+
+
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     margin-top: 25px;
+    margin-bottom: 50px;
+    margin-top: 50px; 
+
+    padding: 25px;
+    background-color: rgba(255, 255, 255, 0.85); /* Black w/opacity/see-through */
+    border: 1px solid #888888;
+
+    -moz-box-shadow: -3px 3px 5px #888888;
+    -webkit-box-shadow: -3px 3px 5px #888888;
+    box-shadow: -3px 3px 5px #888888;
+
 }
 
 .crystalContainer {
-    background-color:#3E3E3E;
     float: left;
-    border-radius: 15px;
     padding: 25px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
